@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  color: white;
+  padding: 4px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.dark-nav {
+  background-color: rgba(0, 0, 128, 0.85);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+.logoi {
+  width: 65px;
+  cursor: pointer;
+}
+.logoi:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+.company-name:hover {
+  color: #ffcc00;
+  cursor: pointer;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 5px 20px;
+  font-size: 16px;
+}
+nav ul li:hover {
+  background: whitesmoke;
+  padding: 10px;
+  color: black;
+  border: 1px solid beige;
+  border-radius: 10px;
+  transition: 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.active-link {
+  font-weight: bold;
+  color: yellow;
+  
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .logoi {
+    width: 50px;
+  }
+
+  nav ul li {
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 15px 0;
+  }
+
+  nav ul {
+    position: fixed;
+    font-weight: 900;
+    color: rgb(248, 251, 255);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #212EA0;
+    width: 200px;
+    padding-top: 70px;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    z-index: 11;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px 40px;
+    background-color: #98a2fc;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  .menu-icon {
+    display: block;
+    width: 32px;
+    cursor: pointer;
+    background: transparent;
+  }
+  .menu-icon img {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 25px;
+  height: auto;
+}
+
+  
+
+  .mobile-menu {
+    transform: translateX(100%);
+  }
+
+  .active {
+    transform: translateX(0);
+  }
+}

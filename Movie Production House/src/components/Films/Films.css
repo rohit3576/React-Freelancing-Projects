@@ -1,0 +1,93 @@
+.films {
+  margin: 80px auto;
+  padding: 0 80px;
+  position: relative;
+}
+
+.next-btn, .back-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #212EA0;
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.next-btn:hover, .back-btn:hover {
+  background: #2a36c4;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.back-btn {
+  left: 10px;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  width: 400%;
+  transition: transform 0.5s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.slider ul li {
+  list-style: none;
+  width: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.slide {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  border-radius: 10px;
+  color: #676767;
+  line-height: 1.4;
+  background: #fff;
+  justify-content: center;
+    display: flex;
+  flex-direction: column;
+  align-items: center; /* <-- centers image horizontally */
+  text-align: center;
+  
+}
+
+.slide img {
+    width: 300px;
+  border-radius: 10px;
+  border: 2px solid #6c74ba;
+  margin-bottom: 15px;
+}
+
+.filminfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.films-info h3 {
+  color: #212ea0;
+  font-weight: bold;
+}
+
+
+/* Responsive - show one film per slide on small screens */
+@media (max-width: 768px) {
+
+  .slider ul li {
+    width: 100%;
+  }
+}
